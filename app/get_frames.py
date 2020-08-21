@@ -1,11 +1,14 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
 import numpy as py
 import time
 import cv2
 
 ##这个脚本提取视频帧，用来生成测试用例
 
-print("【INFO】 starting video stream")
-cap = cv2.videoCapture('P:/frame_detection/video/hdc.mov')
+print("[INFO] starting video stream")
+cap = cv2.VideoCapture('P:/frame_detection/video/hdc.mov')
 i=0
 while i <= 180: #提取的数量
 	ret,frame=cap.read()

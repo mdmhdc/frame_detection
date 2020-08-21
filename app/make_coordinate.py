@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
 import numpy as np 
 import time
 import cv2
@@ -24,8 +26,8 @@ class coordinate():
 		x_max=0
 		self.log.info("start get coordinate!!")
 		#测试代码这里用读图片的格式，需要读视频时要更换输入方式
-		for s in range(1,179):
-			frame = cv2.imread('P:/frame_detection/test_frames/frame{A}.jpg'.format(A=s))
+		for s in range(1,178):
+			frame = cv2.imread('P:\\frame_detection\\test_frames\\frame{A}.jpg'.format(A=s))
 			if count < 120: #获取2倍帧率的数据，正常来说足够定位到最大和最小坐标点了，超出这个范围的证明丢帧非常严重，不属于这个工具的测试范畴
 				detection_result=self.detection.find_target(frame,self.color_dist[self.ball_color])
 				#如果是第一帧，标记初始位置，然后直接进入下一帧
